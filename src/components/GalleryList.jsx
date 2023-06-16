@@ -1,9 +1,11 @@
+import { GalleryItem } from "./GalleryItem";
+
 export function GalleryList({ gallery }) {
   return (
     <div>
-      {gallery.map((galleryItem) => {
-        return <p key={galleryItem.id}>{galleryItem.title}</p>;
-      })}
+      {gallery.map((item) => (
+        <GalleryItem key={item.id} item={item} />
+      ))}
     </div>
   );
 }

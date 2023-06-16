@@ -1,0 +1,7 @@
+.GalleryItem-container {
+  width: 300px;
+}
+
+.GalleryItem-image {
+  max-width: 100%;
+}
