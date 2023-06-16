@@ -1,3 +1,9 @@
-export function GalleryList() {
-  return <p>Gallery goes here</p>;
+export function GalleryList({ gallery }) {
+  return (
+    <div>
+      {gallery.map((galleryItem) => {
+        return <p key={galleryItem.id}>{galleryItem.title}</p>;
+      })}
+    </div>
+  );
 }
