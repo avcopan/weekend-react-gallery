@@ -1,7 +1,9 @@
-.GalleryItem-container {
+.GalleryItem {
   width: 300px;
+  height: 300px;
+  overflow: hidden;
 }
 
-.GalleryItem-image {
+.GalleryItem img {
   max-width: 100%;
 }
