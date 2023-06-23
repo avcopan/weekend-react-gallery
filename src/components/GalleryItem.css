@@ -1,7 +1,12 @@
+.GalleryItem {
+  width: 400px;
+  height: 400px;
+  margin: 10px;
+}
+
 .GalleryItem img {
   width: 400px;
   height: 400px;
   object-fit: cover;
   object-position: 50% 50%;
-  margin: 10px;
 }
