@@ -9,8 +9,8 @@ export function LikeButton({ item, refreshState }) {
   };
 
   return (
-    <div className="LikeButton">
-      <IoHeart size={20} title="Like" onClick={handleClick} />
+    <div className="LikeButton" onClick={handleClick}>
+      <IoHeart size={20} title="Like" />
       <div>{item.likes}</div>
     </div>
   );
