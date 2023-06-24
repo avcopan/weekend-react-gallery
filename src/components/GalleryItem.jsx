@@ -19,7 +19,9 @@ export function GalleryItem({ item }) {
         alt={item.description}
       />
       {viewDescription && <span>{item.description}</span>}
-      <LikeButton item={item} className="GalleryItem-like-container" />
+      <div className="GalleryItem-like-container">
+        <LikeButton item={item} />
+      </div>
     </div>
   );
 }

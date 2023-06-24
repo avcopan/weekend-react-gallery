@@ -1,14 +1,15 @@
 import { IoHeart } from "react-icons/io5";
 import "./LikeButton.css";
 
-export function LikeButton({ item, className }) {
+export function LikeButton({ item }) {
   return (
-    <div className={className}>
-      <IoHeart
-        title="Like"
-        className="LikeButton-icon"
-        // onClick={onClick}
-      />
+    <div className="LikeButton">
+        <IoHeart
+          size={20}
+          title="Like"
+          // onClick={onClick}
+        />
+      <div>10000</div>
     </div>
   );
 }
