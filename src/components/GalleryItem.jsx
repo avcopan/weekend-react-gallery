@@ -7,12 +7,13 @@ export function GalleryItem({ item }) {
   const toggleViewDescription = () => setViewDescription(!viewDescription);
 
   return (
-    <div className="GalleryItem" onClick={toggleViewDescription}>
-      {viewDescription ? (
-        <div>{item.description}</div>
-      ) : (
-        <img src={item.path} alt={item.description} />
-      )}
+    <div
+      className="GalleryItem"
+      onClick={toggleViewDescription}
+      onMouseLeave={() => setViewDescription(false)}
+    >
+      {viewDescription && <span>{item.description}</span>}
+      <img src={item.path} alt={item.description} />
     </div>
   );
 }

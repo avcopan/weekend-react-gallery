@@ -10,3 +10,13 @@
   object-fit: cover;
   object-position: 50% 50%;
 }
+
+.GalleryItem span {
+  width: 300px;
+  height: 300px;
+  padding: 50px;
+  display: inline-flex;
+  align-items: center;
+  position: absolute;
+  color: white;
+}
