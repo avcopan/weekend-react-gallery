@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <GalleryList gallery={gallery} />
+      <GalleryList gallery={gallery} refreshState={refreshState} />
     </div>
   );
 }

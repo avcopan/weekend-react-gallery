@@ -2,7 +2,7 @@ import { useState } from "react";
 import { LikeButton } from "./LikeButton";
 import "./GalleryItem.css";
 
-export function GalleryItem({ item }) {
+export function GalleryItem({ item, refreshState }) {
   const [viewDescription, setViewDescription] = useState(false);
 
   const toggleViewDescription = () => setViewDescription(!viewDescription);
@@ -20,7 +20,7 @@ export function GalleryItem({ item }) {
       />
       {viewDescription && <span>{item.description}</span>}
       <div className="GalleryItem-like-container">
-        <LikeButton item={item} />
+        <LikeButton item={item} refreshState={refreshState} />
       </div>
     </div>
   );
