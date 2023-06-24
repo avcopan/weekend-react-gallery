@@ -45,14 +45,13 @@ const incrementGalleryItemLikes = async (id) => {
   }
 };
 
-getGallery()
-  .then((gallery) => {
-    if (gallery.length === 0) {
+getGallery().then((gallery) => {
+  if (gallery.length === 0) {
     Promise.all(defaultGalleryItems.map(addGalleryItem))
       .then(getGallery)
       .then(console.log);
-    }
-  })
+  }
+});
 
 module.exports = {
   getGallery,
