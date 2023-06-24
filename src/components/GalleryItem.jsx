@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { LikeButton } from "./LikeButton";
 import "./GalleryItem.css";
 
 export function GalleryItem({ item }) {
@@ -13,11 +14,12 @@ export function GalleryItem({ item }) {
       onMouseLeave={() => setViewDescription(false)}
     >
       <img
-        className={viewDescription && "GalleryItem-img-blur"}
+        className={viewDescription ? "GalleryItem-img-blur" : ""}
         src={item.path}
         alt={item.description}
       />
       {viewDescription && <span>{item.description}</span>}
+      <LikeButton item={item} className="GalleryItem-like-container" />
     </div>
   );
 }
