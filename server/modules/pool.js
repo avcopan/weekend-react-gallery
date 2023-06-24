@@ -17,13 +17,4 @@ if (process.env.DB_PASSWORD) {
 
 const pool = new pg.Pool(pool_args);
 
-function testPool() {
-  pool
-    .query("SELECT * FROM gallery;")
-    .then((result) => console.log(result.rows))
-    .catch(console.error);
-}
-
-testPool();
-
 module.exports = pool;
