@@ -9,7 +9,8 @@ const handleError = (error) => {
 export const getGallery = async () => {
   try {
     const res = await axios.get("/gallery");
-    return res.data;
+    const gallery = res.data.sort((a, b) => a.id - b.id);
+    return gallery;
   } catch (error) {
     return handleError(error);
   }

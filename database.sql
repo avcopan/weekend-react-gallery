@@ -1,0 +1,7 @@
+CREATE TABLE gallery (
+  id SERIAL PRIMARY KEY,
+  path TEXT NOT NULL,
+  title VARCHAR(120) NOT NULL DEFAULT '',
+  description TEXT NOT NULL DEFAULT '',
+  likes INTEGER NOT NULL DEFAULT 0
+);
