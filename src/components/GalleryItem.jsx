@@ -12,8 +12,12 @@ export function GalleryItem({ item }) {
       onClick={toggleViewDescription}
       onMouseLeave={() => setViewDescription(false)}
     >
+      <img
+        className={viewDescription && "GalleryItem-img-blur"}
+        src={item.path}
+        alt={item.description}
+      />
       {viewDescription && <span>{item.description}</span>}
-      <img src={item.path} alt={item.description} />
     </div>
   );
 }
